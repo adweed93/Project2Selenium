@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22012" started-at="2018-05-09T17:48:58Z" finished-at="2018-05-09T17:49:20Z">
+  <suite name="Default suite" duration-ms="22191" started-at="2018-05-09T20:49:19Z" finished-at="2018-05-09T20:49:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22012" started-at="2018-05-09T17:48:58Z" finished-at="2018-05-09T17:49:20Z">
+    <test name="Default test" duration-ms="22191" started-at="2018-05-09T20:49:19Z" finished-at="2018-05-09T20:49:41Z">
       <class name="com.revature.testing.TestNGTests">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.revature.testing.TestNGTests@598067a5]" name="getDriver" is-config="true" duration-ms="9771" started-at="2018-05-09T17:48:58Z" finished-at="2018-05-09T17:49:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="trainerLoginTest()[pri:0, instance:com.revature.testing.TestNGTests@598067a5]" name="trainerLoginTest" duration-ms="12226" started-at="2018-05-09T17:49:08Z" finished-at="2018-05-09T17:49:20Z">
+        <test-method status="PASS" signature="trainerLoginTest()[pri:0, instance:com.revature.testing.TestNGTests@581ac8a8]" name="trainerLoginTest" duration-ms="3227" started-at="2018-05-09T20:49:19Z" finished-at="2018-05-09T20:49:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trainerLoginTest -->
+        <test-method status="PASS" signature="trainerNavButtonTest()[pri:0, instance:com.revature.testing.TestNGTests@581ac8a8]" name="trainerNavButtonTest" duration-ms="18305" started-at="2018-05-09T20:49:22Z" depends-on-methods="com.revature.testing.TestNGTests.trainerLoginTest" finished-at="2018-05-09T20:49:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trainerNavButtonTest -->
+        <test-method status="PASS" signature="homeSortByNameTest()[pri:0, instance:com.revature.testing.TestNGTests@581ac8a8]" name="homeSortByNameTest" duration-ms="639" started-at="2018-05-09T20:49:40Z" depends-on-methods="com.revature.testing.TestNGTests.trainerNavButtonTest" finished-at="2018-05-09T20:49:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homeSortByNameTest -->
       </class> <!-- com.revature.testing.TestNGTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
