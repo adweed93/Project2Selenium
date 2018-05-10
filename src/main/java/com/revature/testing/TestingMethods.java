@@ -27,7 +27,7 @@ public class TestingMethods
 		System.setProperty("webdriver.chrome.driver", path);
 		
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default");
+		options.addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\");
 		
 		//Make and return a ChromeDriver:
 		return(new ChromeDriver(options));
