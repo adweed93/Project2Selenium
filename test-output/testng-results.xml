@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="2" ignored="0" total="4" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37324" started-at="2018-05-10T14:38:33Z" finished-at="2018-05-10T14:39:10Z">
+  <suite name="Default suite" duration-ms="89723" started-at="2018-05-10T16:25:12Z" finished-at="2018-05-10T16:26:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37324" started-at="2018-05-10T14:38:33Z" finished-at="2018-05-10T14:39:10Z">
+    <test name="Default test" duration-ms="89723" started-at="2018-05-10T16:25:12Z" finished-at="2018-05-10T16:26:42Z">
       <class name="com.revature.testing.TestNGTests">
-        <test-method status="PASS" signature="trainerLoginTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerLoginTest" duration-ms="3542" started-at="2018-05-10T14:38:33Z" finished-at="2018-05-10T14:38:37Z">
+        <test-method status="PASS" signature="trainerLoginTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerLoginTest" duration-ms="3749" started-at="2018-05-10T16:25:12Z" finished-at="2018-05-10T16:25:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trainerLoginTest -->
-        <test-method status="FAIL" signature="vpLoginTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpLoginTest" duration-ms="5084" started-at="2018-05-10T14:38:37Z" finished-at="2018-05-10T14:38:42Z">
+        <test-method status="FAIL" signature="vpLoginTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpLoginTest" duration-ms="4269" started-at="2018-05-10T16:25:16Z" finished-at="2018-05-10T16:25:20Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"username"}
@@ -23,7 +23,7 @@ Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.1
 System info: host: 'LAPTOP-GVN7F6DN', ip: '192.168.60.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\firen\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
-Session ID: d65a3fb1d4d4486f16f8bdd5fe757642
+Session ID: 8955daabbe8b33d2c07ac87eab3e4728
 *** Element info: {Using=id, value=username}]]>
             </message>
             <full-stacktrace>
@@ -36,7 +36,7 @@ Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.1
 System info: host: 'LAPTOP-GVN7F6DN', ip: '192.168.60.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\firen\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
-Session ID: d65a3fb1d4d4486f16f8bdd5fe757642
+Session ID: 8955daabbe8b33d2c07ac87eab3e4728
 *** Element info: {Using=id, value=username}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -54,8 +54,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:365)
 at org.openqa.selenium.By$ById.findElement(By.java:218)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-at com.revature.testing.TestingMethods.vpLogin(TestingMethods.java:81)
-at com.revature.testing.TestNGTests.vpLoginTest(TestNGTests.java:93)
+at com.revature.testing.TestingMethods.vpLogin(TestingMethods.java:99)
+at com.revature.testing.TestNGTests.vpLoginTest(TestNGTests.java:94)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -87,76 +87,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- vpLoginTest -->
-        <test-method status="FAIL" signature="trainerNavButtonTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerNavButtonTest" duration-ms="28649" started-at="2018-05-10T14:38:42Z" depends-on-methods="com.revature.testing.TestNGTests.trainerLoginTest" finished-at="2018-05-10T14:39:10Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.assertNotEquals(Assert.java:1157)
-at org.testng.Assert.assertNotEquals(Assert.java:1162)
-at com.revature.testing.TestNGTests.trainerNavButtonTest(TestNGTests.java:76)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="trainerNavButtonTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerNavButtonTest" duration-ms="81676" started-at="2018-05-10T16:25:20Z" depends-on-methods="com.revature.testing.TestNGTests.trainerLoginTest" finished-at="2018-05-10T16:26:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trainerNavButtonTest -->
-        <test-method status="SKIP" signature="homeSortByNameTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="homeSortByNameTest" duration-ms="0" started-at="2018-05-10T14:39:10Z" depends-on-methods="com.revature.testing.TestNGTests.trainerNavButtonTest" finished-at="2018-05-10T14:39:10Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method TestNGTests.homeSortByNameTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestNGTests.homeSortByNameTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method status="PASS" signature="homeSortByNameTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="homeSortByNameTest" duration-ms="0" started-at="2018-05-10T16:26:42Z" depends-on-methods="com.revature.testing.TestNGTests.trainerNavButtonTest" finished-at="2018-05-10T16:26:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homeSortByNameTest -->

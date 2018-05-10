@@ -2,6 +2,10 @@
 package com.revature.testing;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -75,7 +79,21 @@ public class TestingMethods
 	public static void vpLogin(WebDriver browser)
 	{
 		//Navigate to the login page:
-		browser.get("https://dev.assignforce.revaturelabs.com");
+		browser.navigate().to("https://dev.assignforce.revaturelabs.com");
+		
+		System.out.println(browser.getCurrentUrl());
+		
+		//System.out.println("\n \n" + browser.getPageSource());
+		try
+		{
+			PrintWriter writer = new PrintWriter(new FileWriter("SourceCode.txt"));
+			writer.write(browser.getPageSource());
+			writer.close();
+		}
+		catch(Throwable t)
+		{
+			System.err.println("Oops...");
+		}
 		
 		//Acquire the relevant input objects:
 		WebElement usernameField = browser.findElement(By.id("username"));

@@ -63,16 +63,17 @@ public class TestNGTests
 		
 			//Logout button:
 		TestingMethods.pushButtonFromNavBar(browser, "logout");
+		String sourceCode = "";
+		for(int i=0; i<199; i++)
+		{
+			//System.out.println(i);
+			sourceCode = browser.getPageSource();
+			//System.out.println(browser.getCurrentUrl());
+		}
+		System.out.println(browser.getCurrentUrl());
 		expectedURL = "https://dev.assignforce.revaturelabs.com/settings";
 		actualURL = browser.getCurrentUrl();
-		String sourceCode = "";
-		for(int i=0; i<999; i++)
-		{
-			System.out.println(i);
-			sourceCode = browser.getPageSource();
-		}
 		
-		System.out.println(actualURL);
 		Assert.assertNotEquals(actualURL, expectedURL);
 	}
 	

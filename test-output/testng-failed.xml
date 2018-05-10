@@ -5,10 +5,7 @@
     <classes>
       <class name="com.revature.testing.TestNGTests">
         <methods>
-          <include name="trainerNavButtonTest"/>
-          <include name="homeSortByNameTest"/>
           <include name="vpLoginTest"/>
-          <include name="trainerLoginTest"/>
         </methods>
       </class> <!-- com.revature.testing.TestNGTests -->
     </classes>
