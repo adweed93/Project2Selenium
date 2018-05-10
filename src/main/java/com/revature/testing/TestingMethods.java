@@ -72,5 +72,22 @@ public class TestingMethods
 	}
 	
 	
+	public static void vpLogin(WebDriver browser)
+	{
+		//Navigate to the login page:
+		browser.get("https://dev.assignforce.revaturelabs.com");
+		
+		//Acquire the relevant input objects:
+		WebElement usernameField = browser.findElement(By.id("username"));
+		WebElement passwordField = browser.findElement(By.id("password"));
+		WebElement submitButton = browser.findElement(By.id("Login"));
+		
+		//Perform the login actions:
+		usernameField.sendKeys("test.vpoftech@revature.com.int1");
+		passwordField.sendKeys("yuvi1712");
+		submitButton.click();
+	}
+	
+	
 	
 }

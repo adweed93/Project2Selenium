@@ -63,8 +63,15 @@ public class TestNGTests
 		
 			//Logout button:
 		TestingMethods.pushButtonFromNavBar(browser, "logout");
-		expectedURL = "https://dev.assignforce.revaturelabs.com/reports";
+		expectedURL = "https://dev.assignforce.revaturelabs.com/settings";
 		actualURL = browser.getCurrentUrl();
+		String sourceCode = "";
+		for(int i=0; i<999; i++)
+		{
+			System.out.println(i);
+			sourceCode = browser.getPageSource();
+		}
+		
 		System.out.println(actualURL);
 		Assert.assertNotEquals(actualURL, expectedURL);
 	}
@@ -75,7 +82,22 @@ public class TestNGTests
 		
 		
 		
-		browser.quit();
+		//browser.quit();
+	}
+	
+	
+	@Test
+	public void vpLoginTest()
+	{
+		//Perform the login actions:
+		TestingMethods.vpLogin(browser);
+		
+		//Establish what URL we expect the new URL to be and what the new URL actually is:
+		String expectedURL = "https://dev.assignforce.revaturelabs.com/home";
+		String actualURL = browser.getCurrentUrl();
+		
+		//Test whether the new URL is what it should be:
+		Assert.assertEquals(actualURL, expectedURL);
 	}
 	
 	
