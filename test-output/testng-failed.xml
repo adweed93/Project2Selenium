@@ -6,6 +6,8 @@
       <class name="com.revature.testing.TestNGTests">
         <methods>
           <include name="vpLoginTest"/>
+          <include name="vpBatchCreationTest"/>
+          <include name="vpBatchesNavTest"/>
         </methods>
       </class> <!-- com.revature.testing.TestNGTests -->
     </classes>

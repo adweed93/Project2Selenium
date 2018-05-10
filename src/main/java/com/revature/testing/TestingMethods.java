@@ -2,14 +2,14 @@
 package com.revature.testing;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 
@@ -78,32 +78,92 @@ public class TestingMethods
 	
 	public static void vpLogin(WebDriver browser)
 	{
-		//Navigate to the login page:
-		browser.navigate().to("https://dev.assignforce.revaturelabs.com");
+		//Declare the relevant input objects:
+		WebElement usernameField;
+		WebElement passwordField;
+		WebElement submitButton;
 		
-		System.out.println(browser.getCurrentUrl());
-		
-		//System.out.println("\n \n" + browser.getPageSource());
+		//Supports the test even if the trainer tests didn't leave off on a login page:
 		try
 		{
-			PrintWriter writer = new PrintWriter(new FileWriter("SourceCode.txt"));
-			writer.write(browser.getPageSource());
-			writer.close();
+			//Acquire the relevant input objects:
+			usernameField = browser.findElement(By.id("username"));
+			passwordField = browser.findElement(By.id("password"));
+			submitButton = browser.findElement(By.id("Login"));
 		}
-		catch(Throwable t)
+		catch(NoSuchElementException e)
 		{
-			System.err.println("Oops...");
+			browser.quit();
+			browser = getDriver();
+			browser.get("https://dev.assignforce.revaturelabs.com");
+			
+			//Acquire the relevant input objects:
+			usernameField = browser.findElement(By.id("username"));
+			passwordField = browser.findElement(By.id("password"));
+			submitButton = browser.findElement(By.id("Login"));
 		}
-		
-		//Acquire the relevant input objects:
-		WebElement usernameField = browser.findElement(By.id("username"));
-		WebElement passwordField = browser.findElement(By.id("password"));
-		WebElement submitButton = browser.findElement(By.id("Login"));
 		
 		//Perform the login actions:
 		usernameField.sendKeys("test.vpoftech@revature.com.int1");
 		passwordField.sendKeys("yuvi1712");
 		submitButton.click();
+	}
+	
+	public static void selectFirstOption(WebDriver browser, String menuID, String optionValue)
+	{
+		//Acquire the desired menu object:
+		WebElement menuObject = browser.findElement(By.id(menuID));
+		//Click into the menu:
+		menuObject.click();
+		
+		String sourceCode = "";
+		for(int i=0; i<50; i++)
+			sourceCode = browser.getPageSource();
+		//System.gc();
+		
+		Select menu = new Select(browser.findElement(By.id(menuID)));
+		ArrayList<WebElement> allOptions = new ArrayList<WebElement>();
+		for(int i=0; i<menu.getOptions().size(); i++)
+		{
+			allOptions.add(menu.getOptions().get(i));
+		}
+		
+		menuObject.findElement(By.tagName("md-option")).click();
+		
+		
+		//Select menu = new Select(browser.findElement(By.id(menuID)));
+		
+		//menu.selectByVisibleText(optionValue);
+		
+		
+		//Acquire the desired option object:
+		//WebElement optionObject = browser.findElement(By.tagName("md-option"));
+				//browser.findElement(By.id(optionID));
+		
+		//System.out.println("About to push the " + optionObject.getAttribute("id") + " button...");
+		
+		//Select the desired option:
+		//optionObject.click();
+	}
+	
+	public static void selectAnotherOption(WebDriver browser, String optionID)
+	{
+		//Acquire the desired option object:
+		WebElement optionObject = browser.findElement(By.id(optionID));
+		//Select the desired option:
+		optionObject.click();
+	}
+	
+	public static void enterText(WebDriver browser, WebElement field, String sendInput)
+	{
+		//Give the desired input text to the desired input object:
+		field.sendKeys(sendInput);
+	}
+	
+	public static void makeTheBatch(WebDriver browser, WebElement button)
+	{
+		//Push the submit button to submit the finished batch:
+		button.click();
 	}
 	
 	

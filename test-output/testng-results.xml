@@ -1,61 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="89723" started-at="2018-05-10T16:25:12Z" finished-at="2018-05-10T16:26:42Z">
+  <suite name="Default suite" duration-ms="148874" started-at="2018-05-10T20:42:14Z" finished-at="2018-05-10T20:44:43Z">
     <groups>
+      <group name="trainerTests">
+        <method signature="TestNGTests.trainerLoginTest()[pri:1, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerLoginTest" class="com.revature.testing.TestNGTests"/>
+        <method signature="TestNGTests.trainerNavButtonTest()[pri:1, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerNavButtonTest" class="com.revature.testing.TestNGTests"/>
+      </group> <!-- trainerTests -->
+      <group name="vpTests">
+        <method signature="TestNGTests.vpLoginTest()[pri:2, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpLoginTest" class="com.revature.testing.TestNGTests"/>
+        <method signature="TestNGTests.vpBatchesNavTest()[pri:3, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpBatchesNavTest" class="com.revature.testing.TestNGTests"/>
+        <method signature="TestNGTests.vpBatchCreationTest()[pri:3, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpBatchCreationTest" class="com.revature.testing.TestNGTests"/>
+        <method signature="TestNGTests.vpOverviewNavTest()[pri:2, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpOverviewNavTest" class="com.revature.testing.TestNGTests"/>
+      </group> <!-- vpTests -->
+      <group name="batchesTests">
+        <method signature="TestNGTests.vpBatchesNavTest()[pri:3, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpBatchesNavTest" class="com.revature.testing.TestNGTests"/>
+        <method signature="TestNGTests.vpBatchCreationTest()[pri:3, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpBatchCreationTest" class="com.revature.testing.TestNGTests"/>
+      </group> <!-- batchesTests -->
     </groups>
-    <test name="Default test" duration-ms="89723" started-at="2018-05-10T16:25:12Z" finished-at="2018-05-10T16:26:42Z">
+    <test name="Default test" duration-ms="148874" started-at="2018-05-10T20:42:14Z" finished-at="2018-05-10T20:44:43Z">
       <class name="com.revature.testing.TestNGTests">
-        <test-method status="PASS" signature="trainerLoginTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerLoginTest" duration-ms="3749" started-at="2018-05-10T16:25:12Z" finished-at="2018-05-10T16:25:16Z">
+        <test-method status="PASS" signature="trainerLoginTest()[pri:1, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerLoginTest" duration-ms="4448" started-at="2018-05-10T20:42:14Z" finished-at="2018-05-10T20:42:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trainerLoginTest -->
-        <test-method status="FAIL" signature="vpLoginTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpLoginTest" duration-ms="4269" started-at="2018-05-10T16:25:16Z" finished-at="2018-05-10T16:25:20Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="PASS" signature="trainerNavButtonTest()[pri:1, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerNavButtonTest" duration-ms="134645" started-at="2018-05-10T20:42:18Z" depends-on-methods="com.revature.testing.TestNGTests.trainerLoginTest" finished-at="2018-05-10T20:44:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trainerNavButtonTest -->
+        <test-method status="PASS" signature="vpLoginTest()[pri:2, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpLoginTest" duration-ms="1632" started-at="2018-05-10T20:44:33Z" finished-at="2018-05-10T20:44:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- vpLoginTest -->
+        <test-method status="PASS" signature="vpOverviewNavTest()[pri:2, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpOverviewNavTest" duration-ms="1242" started-at="2018-05-10T20:44:35Z" depends-on-methods="com.revature.testing.TestNGTests.vpLoginTest" finished-at="2018-05-10T20:44:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- vpOverviewNavTest -->
+        <test-method status="PASS" signature="vpBatchesNavTest()[pri:3, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpBatchesNavTest" duration-ms="783" started-at="2018-05-10T20:44:36Z" depends-on-methods="com.revature.testing.TestNGTests.vpLoginTest" finished-at="2018-05-10T20:44:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- vpBatchesNavTest -->
+        <test-method status="FAIL" signature="vpBatchCreationTest()[pri:3, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="vpBatchCreationTest" duration-ms="6074" started-at="2018-05-10T20:44:37Z" depends-on-methods="com.revature.testing.TestNGTests.vpBatchesNavTest" finished-at="2018-05-10T20:44:43Z">
+          <exception class="org.openqa.selenium.support.ui.UnexpectedTagNameException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"username"}
-  (Session info: chrome=66.0.3359.139)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[Element should have been "select" but was "md-select"
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
 System info: host: 'LAPTOP-GVN7F6DN', ip: '192.168.60.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\firen\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
-Session ID: 8955daabbe8b33d2c07ac87eab3e4728
-*** Element info: {Using=id, value=username}]]>
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"username"}
-  (Session info: chrome=66.0.3359.139)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "md-select"
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
 System info: host: 'LAPTOP-GVN7F6DN', ip: '192.168.60.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\firen\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
-Session ID: 8955daabbe8b33d2c07ac87eab3e4728
-*** Element info: {Using=id, value=username}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:365)
-at org.openqa.selenium.By$ById.findElement(By.java:218)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-at com.revature.testing.TestingMethods.vpLogin(TestingMethods.java:99)
-at com.revature.testing.TestNGTests.vpLoginTest(TestNGTests.java:94)
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.Select.<init>(Select.java:47)
+at com.revature.testing.TestingMethods.selectFirstOption(TestingMethods.java:124)
+at com.revature.testing.TestNGTests.vpBatchCreationTest(TestNGTests.java:149)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -83,18 +84,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.support.ui.UnexpectedTagNameException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- vpLoginTest -->
-        <test-method status="PASS" signature="trainerNavButtonTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="trainerNavButtonTest" duration-ms="81676" started-at="2018-05-10T16:25:20Z" depends-on-methods="com.revature.testing.TestNGTests.trainerLoginTest" finished-at="2018-05-10T16:26:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- trainerNavButtonTest -->
-        <test-method status="PASS" signature="homeSortByNameTest()[pri:0, instance:com.revature.testing.TestNGTests@57d7f8ca]" name="homeSortByNameTest" duration-ms="0" started-at="2018-05-10T16:26:42Z" depends-on-methods="com.revature.testing.TestNGTests.trainerNavButtonTest" finished-at="2018-05-10T16:26:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- homeSortByNameTest -->
+        </test-method> <!-- vpBatchCreationTest -->
       </class> <!-- com.revature.testing.TestNGTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
