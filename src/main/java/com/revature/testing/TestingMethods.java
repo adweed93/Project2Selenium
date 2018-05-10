@@ -30,7 +30,7 @@ public class TestingMethods
 		options.addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default");
 		
 		//Make and return a ChromeDriver:
-		return(new ChromeDriver());
+		return(new ChromeDriver(options));
 	}
 	
 	
