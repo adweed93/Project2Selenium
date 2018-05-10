@@ -3,14 +3,14 @@ package com.revature.testing;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 
 
@@ -25,6 +25,9 @@ public class TestingMethods
 		if(!exists)		// windows path
 			path = "src\\main\\resources\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", path);
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default");
 		
 		//Make and return a ChromeDriver:
 		return(new ChromeDriver());
