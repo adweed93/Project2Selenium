@@ -28,7 +28,7 @@ public class TestNGTests
 		}
 		
 		//Establish what URL we expect the new URL to be and what the new URL actually is:
-		String expectedURL = "https://dev.assignforce.revaturelabs.com/";
+		String expectedURL = "https://dev.assignforce.revaturelabs.com/home";
 		String actualURL = browser.getCurrentUrl();
 		
 		//Test whether the new URL is what it should be:
@@ -100,7 +100,7 @@ public class TestNGTests
 		TestingMethods.vpLogin(browser);
 		
 		//Establish what URL we expect the new URL to be and what the new URL actually is:
-		String expectedURL = "https://dev.assignforce.revaturelabs.com/";
+		String expectedURL = "https://dev.assignforce.revaturelabs.com/home";
 		String actualURL = browser.getCurrentUrl();
 		
 		//Test whether the new URL is what it should be:
