@@ -21,7 +21,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class TestingMethods
 {
-	public static ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
+	public static ChromeOptions options = new ChromeOptions().addArguments(
+			"user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
 	
 	
 	public static WebDriver getDriver()
@@ -128,17 +129,36 @@ public class TestingMethods
 		
 		String sourceCode = "";
 		for(int i=0; i<50; i++)
+		{
 			sourceCode = browser.getPageSource();
+		}
+		
+		
+		
+		
+		
 		//System.gc();
+		
+		//menuObject.sendKeys("\n");
+		
+		/*
+		System.out.println("About to get all of the options...");
 		
 		Select menu = new Select(browser.findElement(By.id(menuID)));
 		ArrayList<WebElement> allOptions = new ArrayList<WebElement>();
 		for(int i=0; i<menu.getOptions().size(); i++)
 		{
+			System.out.println("Got something.");
 			allOptions.add(menu.getOptions().get(i));
+			System.out.println("Option " + i + " = " + allOptions.get(i).getAttribute("name"));
 		}
 		
-		menuObject.findElement(By.tagName("md-option")).click();
+		System.out.println("Got all of the options.");
+		
+		allOptions.get(0).click();
+		*/
+		
+		//menuObject.findElement(By.tagName("md-option")).click();
 		
 		
 		//Select menu = new Select(browser.findElement(By.id(menuID)));
