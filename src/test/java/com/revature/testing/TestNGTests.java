@@ -21,6 +21,12 @@ public class TestNGTests
 		//Perform the login actions:
 		TestingMethods.trainerLogin(browser);
 		
+		String sourceCode = "";
+		for(int i=0; i<10; i++)
+		{
+			sourceCode = browser.getPageSource();
+		}
+		
 		//Establish what URL we expect the new URL to be and what the new URL actually is:
 		String expectedURL = "https://dev.assignforce.revaturelabs.com/";
 		String actualURL = browser.getCurrentUrl();
