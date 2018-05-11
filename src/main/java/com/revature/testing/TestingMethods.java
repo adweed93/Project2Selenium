@@ -21,6 +21,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class TestingMethods
 {
+	ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\");
+	
+	
 	public static WebDriver getDriver()
 	{
 		//Multi-OS support:
@@ -31,8 +34,7 @@ public class TestingMethods
 			path = "src\\main\\resources\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", path);
 		
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\");
+		
 		
 		//Make and return a ChromeDriver:
 		return(new ChromeDriver(options));
